@@ -55,31 +55,15 @@
                 <h2>About</h2>
                 <p>
                     I am a student at the University of Minnesota, Twin Cities
-                    graduating in Spring, 2024 with a B.S. in Computer Science. 
-                </p>
-            </div>
-            <div id="profile-skills">
-                <div id="profile">
-                    <h3>Profile</h3>
-                    <p>
-                    I'm currently looking for a summer interhsip, but would also 
-                    be interested in a co-op or part-time work throughout the school 
-                    year. If you think I would be a good fit, please reach out 
-                    at
+                    graduating in Spring, 2024 with a B.S. in Computer Science.
+                    I'm currently looking for a summer interhsip, but would also
+                    be interested in a co-op or part-time work throughout the
+                    school year. If you think I would be a good fit, please
+                    reach out at
                     <a href="mailto:nicholas.victor.kelly@gmail.com">
                         nicholas.victor.kelly@gmail.com
-                    </a>
-                    </p>
-                </div>
-                <div id="skills">
-                    <h3>Skills</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                        eos nisi ullam rerum iusto praesentium ab suscipit voluptatem minima
-                        nostrum mollitia est aliquid dignissimos, rem sunt, molestiae illum
-                        non hic?
-                    </p>
-                </div>
+                    </a>.
+                </p>
             </div>
             <a href="files/Nicholas Kelly.pdf" download>Download CV</a>
         </div>
@@ -89,8 +73,8 @@
         <div id="projects-page" class="content-row">
             <h2>Projects</h2>
             <div id="projects-container">
-                <div>
-                    <a href="">
+                <div id="battlecode-popup-button">
+                    <a onclick="addPopup('#battlecode-project')">
                         <img src="images/battlecode.png" alt="">
                         <div class="overlay">
                             <h4>Battlecode</h4>
@@ -101,7 +85,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a onclick="addPopup('#project-2048')">
                         <img src="images/2048.png" alt="">
                         <div class="overlay">
                             <h4>2048 AI</h4>
@@ -112,7 +96,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a onclick="addPopup('#sudoku-project')">
                         <img src="images/sudoku.png" alt="">
                         <div class="overlay">
                             <h4>Sudoku Solver</h4>
@@ -123,7 +107,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a onclick="addPopup('#personal-website-project')">
                         <img src="images/personal_website_square.png" alt="">
                         <div class="overlay">
                             <h4>Personal Website</h4>
@@ -137,7 +121,8 @@
             <div style="clear: both"></div>
         </div>
     </div>
-    <!-- <div class="gray-out-screen"></div> -->
+
+    <div class="gray-out-screen hidden"></div>
     <div id="battlecode-project" class="project-details hidden">
         <h2>Battlecode</h2>
         <p>
@@ -152,8 +137,61 @@
         </div>
         <hr>
         <div class="project-links">
-            <a href="">Github</a>
-            <a href="">Close</a>
+            <a href="https://github.com/NicholasKelly15/battlecode23" target="_blank">Github</a>
+            <a onclick="closePopup()">Close</a>
+        </div>
+    </div>
+    <div id="project-2048" class="project-details hidden">
+        <h2>2048 AI</h2>
+        <p>
+            Created an AI to play the online tile merging game 2048. Used both a
+            Monte Carlo simulation strategy and a heuristic tree search
+            algorithm to obtain the 2048 tile 99% of the time.
+        </p>
+        <div class="project-languages">
+            <i class="fa-solid fa-language"></i>
+            <span>HTML, CSS, JavaScript</span>
+        </div>
+        <hr>
+        <div class="project-links">
+            <a href="https://github.com/NicholasKelly15/2048-ai/tree/master" target="_blank">Github</a>
+            <a href="https://nicholaskelly15.github.io/2048-ai/" target="_blank">View</a>
+            <a onclick="closePopup()">Close</a>
+        </div>
+    </div>
+    <div id="sudoku-project" class="project-details hidden">
+        <h2>Sudoku Solver</h2>
+        <p>
+            Developed a Sudoku solver that can solve any given puzzle. Solves
+            every Sudoku puzzle by using a depth first search, using common 
+            Sudoku strategies to limit the branching factor as much as is 
+            easily possible.
+        </p>
+        <div class="project-languages">
+            <i class="fa-solid fa-language"></i>
+            <span>JavaScript, P5JS</span>
+        </div>
+        <hr>
+        <div class="project-links">
+            <a href="https://github.com/NicholasKelly15/p5js_sudoku" target="_blank">Github</a>
+            <a href="https://nicholaskelly15.github.io/p5js_sudoku/" target="_blank">View</a>
+            <a onclick="closePopup()">Close</a>
+        </div>
+    </div>
+    <div id="personal-website-project" class="project-details hidden">
+        <h2>Personal Website</h2>
+        <p>
+            Created a personal website for showing resume and projects.
+        </p>
+        <div class="project-languages">
+            <i class="fa-solid fa-language"></i>
+            <span>HTML, CSS, JavaScript</span>
+        </div>
+        <hr>
+        <div class="project-links">
+            <a href="https://github.com/NicholasKelly15/personal-website" target="_blank">Github</a>
+            <a href="https://nkelly.info/" target="_blank">View</a>
+            <a onclick="closePopup()">Close</a>
         </div>
     </div>
 
@@ -172,5 +210,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

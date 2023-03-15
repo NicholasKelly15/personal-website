@@ -160,6 +160,11 @@ a:hover {
     }
 }
 
+#profile-skills ul {
+    color: var(--paragraph-color-1);
+    
+}
+
 #about-page div {
     margin: 20px;
 }
@@ -204,12 +209,19 @@ a:hover {
     padding: 20px;
 }
 
+#projects-container img {
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+    box-shadow: 0 0 4px;
+}
+
 #projects-container .overlay {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 5px;
 }
 
 #projects-container .overlay h4 {
@@ -280,6 +292,8 @@ a:hover {
     padding: 10px;
 
     background-color: var(--background-color-2);
+    /* box-shadow: 0 0 5px white; */
+    border-radius: 5px;
     z-index: 3;
 }
 
@@ -303,9 +317,9 @@ a:hover {
 .project-details a {
     color: white;
     background-color: gray;
-    border-radius: 2px;
     margin-right: 10px;
     padding: 5px 10px;
+    border-radius: 2px;
 }
 
 .project-links {
@@ -323,7 +337,7 @@ a:hover {
 }
 
 #contact-page {
-    padding: 20px;
+    padding: 10px;
 }
 
 #contact-page h2 {
@@ -333,7 +347,7 @@ a:hover {
 
 #contact-methods-container {
     width: 100%;
-    margin: 20px;
+    margin: 10px;
     color: var(--paragraph-color-1);
     text-align: center;
 
@@ -346,12 +360,19 @@ a:hover {
     #contact-methods-container {
         flex-direction: row;
     }
+
+    #contact-methods-container p {
+        display: inline;
+    }
+
+    #contact-methods-container div i {
+        font-size: 1.5rem;
+    }
 }
 
 #contact-methods-container i {
     color: var(--header-color-1);
     font-size: 2rem;
-    margin: 10px;
 }
 
 #contact-methods-container p {
